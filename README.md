@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <br />
+  <a href="#"><img src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/VISPA_UI--logo.svg?token=GHSAT0AAAAAABNUG2VVR25CPORFTDXOHBOKYPZHLZA" alt="REcom" width="200"></a>
+  <br />
+  REcom
+  <br />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT SHIELDS -->
+<p align="center">
+  <a href="https://github.com/VishalPatil18/REcom/blob/main/LICENSE" target="blank">
+  <img src="https://img.shields.io/github/license/VishalPatil18/REcom?style=for-the-badge" alt="recom licence" />
+  </a>
+  <a href="https://github.com/VishalPatil18/REcom/fork" target="blank">
+  <img src="https://img.shields.io/github/forks/VishalPatil18/REcom?style=for-the-badge" alt="recom forks"/>
+  </a>
+  <a href="https://github.com/VishalPatil18/REcom/stargazers" target="blank">
+  <img src="https://img.shields.io/github/stars/VishalPatil18/REcom?color=yellow&style=for-the-badge" alt="recom stars"/>
+  </a>
+  <a href="https://github.com/VishalPatil18/REcom/issues" target="blank">
+  <img src="https://img.shields.io/github/issues/VishalPatil18/REcom?style=for-the-badge" alt="recom issues"/>
+  </a>
+  <a href="https://github.com/VishalPatil18/REcom/pulls" target="blank">
+  <img src="https://img.shields.io/github/issues-pr/VishalPatil18/REcom?color=important&style=for-the-badge" alt="recom pull-requests"/>
+  </a>
+  <a href="https://github.com/VishalPatil18/REcom/graphs/code-frequency" target="blank">
+  <img src="https://img.shields.io/tokei/lines/github/VishalPatil18/REcom?label=total%20lines%20of%20code&color=9cf&style=for-the-badge" alt="recom total lines of code"/>
+  </a>
+</p>
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+<!-- PROJECT SUBTITLE -->
+<h3 align="center">Coming Soon...</h3>
 
-### `yarn start`
+<p align="center">
+  <a href="#">Live Website</a>
+  ·
+  <a href="https://github.com/VishalPatil18/REcom/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/VishalPatil18/REcom/issues">Request Feature</a>
+</p>
+<hr />
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#key-features">Key Features</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#folder-structure">Folder Structure</a></li>    
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br />
 
-### `yarn test`
+<!-- ABOUT THE PROJECT -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **🎙 About The Project**
 
-### `yarn build`
+<p align="center">
+  Coming Soon
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- KEY FEATURES -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **🎖 Key Features**
 
-### `yarn eject`
+Coming soon
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- BUILT WITH -->
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **⚙️ Built With**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Coming Soon
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br />
 
-## Learn More
+<!-- FOLDER STRUCTURE -->
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **🗂 Folder Structure**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```jsx
+- /public
+- /src
+   - /backend
+   - /components
+   - /constants
+   - /context
+   - /hooks
+   - /redux
+   - /screens
+   - /services
+   - /utilities
+   - App.js
+   - App.module.css
+   - index.css
+   - index.js
+   - server.js
+- package-lock.json
+- package.json
+- README.md
+- yarn.lock
+```
 
-### Code Splitting
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- CONTRIBUTING -->
 
-### Analyzing the Bundle Size
+## **📤 Contributing**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-### Making a Progressive Web App
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue [here](https://github.com/VishalPatil18/REcom/issues). Don't forget to give the project a star! Thanks again!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature)
+3. Commit your Changes (git commit -m 'Add a descriptive commit message')
+4. Push to the Branch (git push origin feature)
+5. Open a Pull Request
 
-### Advanced Configuration
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- ACKNOWLEDGMENTS -->
 
-### Deployment
+## **🙏 Acknowledgements**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Coming Soon...
+<br />
 
-### `yarn build` fails to minify
+<!-- LICENSE -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **📑 License**
+
+MIT License - Copyright (c) 2022 [Vishal Patil](https://github.com/VishalPatil18)
+
+---
+
+<!-- SOCIAL LINKS -->
+
+> [vishalpatil.me](https://vishalpatil.me/) &nbsp;&middot;&nbsp;
+> GitHub [@VishalPatil18](https://github.com/VishalPatil18) &nbsp;&middot;&nbsp;
+> LinkedIn [@vishalrameshpatil](https://www.linkedin.com/in/vishalrameshpatil) &nbsp;&middot;&nbsp;
+> Twitter [@VishalPatil1810](https://twitter.com/VishalPatil1810)
