@@ -1,6 +1,6 @@
 <h1 align="center">
   <br />
-  <a href="#"><img src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/VISPA_UI--logo.svg?token=GHSAT0AAAAAABNUG2VVR25CPORFTDXOHBOKYPZHLZA" alt="REcom" width="200"></a>
+  <a href="#"><img src="https://res.cloudinary.com/dbjdu0hvl/image/upload/v1649485162/REcom/logo_oahebo.png" alt="REcom" width="200"></a>
   <br />
   REcom
   <br />
