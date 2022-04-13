@@ -4,4 +4,7 @@ export { FeedScroll } from "./FeedScroll";
 export { Navbar } from "./Navbar";
 export { PostCard } from "./PostCard";
 export { ProfileDescCard } from "./ProfileDescCard";
+export { SignupStepOne } from "./SignupStepOne";
+export { SignupStepThree } from "./SignupStepThree";
+export { SignupStepTwo } from "./SignupStepTwo";
 export { SuggestedFriends } from "./SuggestedFriends";
