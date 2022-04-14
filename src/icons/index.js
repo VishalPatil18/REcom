@@ -12,6 +12,7 @@ import {
   FaLaptopCode,
   FaLinkedinIn,
   FaMediumM,
+  FaPlus,
   FaRegHeart,
   FaTwitter,
 } from "react-icons/fa";
@@ -47,6 +48,7 @@ export {
   FaEyeSlash as EyeOff,
   FaHouseUser as House,
   FaLaptopCode as Laptop,
+  FaPlus as Plus,
   FaRegHeart as Like,
   FiBell as Notification,
   FiBookmark as Bookmark,
