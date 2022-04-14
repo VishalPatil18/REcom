@@ -49,4 +49,13 @@
   main .loginSection {
     height: 100vh;
   }
+
+  .ml_75 {
+    margin-left: -75%;
+  }
+
+  .postsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }

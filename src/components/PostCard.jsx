@@ -3,7 +3,7 @@ import { Comment, Like, Liked, Link, Vmenu } from "../icons";
 
 const PostCard = () => {
   return (
-    <article className="rounded-xl bg-white border-slate-200 border">
+    <article className="rounded-xl bg-white border-slate-200 border transition-shadow duration-200 hover:shadow-md">
       <header className="flex gap-3 items-center p-4 pb-0">
         <div>
           <img
