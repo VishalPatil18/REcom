@@ -2,6 +2,8 @@ import { BiEnvelope } from "react-icons/bi";
 import { GrStackOverflow } from "react-icons/gr";
 import { AiOutlineAppstore } from "react-icons/ai";
 import {
+  FaEye,
+  FaEyeSlash,
   FaFacebookF,
   FaGithub,
   FaHeart,
@@ -20,6 +22,7 @@ import {
   FiEdit3,
   FiImage,
   FiLink2,
+  FiLock,
   FiMenu,
   FiMessageCircle,
   FiMessageSquare,
@@ -40,6 +43,8 @@ export {
   /****** UTILITY ******/
   AiOutlineAppstore as Apps,
   BiEnvelope as Message,
+  FaEye as Eye,
+  FaEyeSlash as EyeOff,
   FaHouseUser as House,
   FaLaptopCode as Laptop,
   FaRegHeart as Like,
@@ -49,6 +54,7 @@ export {
   FiEdit3 as Pencil,
   FiImage as Image,
   FiLink2 as Link,
+  FiLock as Lock,
   FiMenu as Menu,
   FiMessageCircle as Comment,
   FiMessageSquare as Chat,
@@ -64,10 +70,10 @@ export {
   FiUserX as RemoveFriend,
   FiX as Close,
   GrStackOverflow as Stack,
-  
+
   /****** SOLID ******/
   FaHeart as Liked,
-
+  
   /****** BRANDS ******/
   FaFacebookF as Facebook,
   FaGithub as Github,
