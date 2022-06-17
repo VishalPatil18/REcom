@@ -1,7 +1,10 @@
+import { useSelector } from "react-redux";
 import { Laptop, House, Stack } from "../icons";
 import { ASSETS_URL } from "../constants";
 
 const ProfileDescCard = () => {
+  const { user } = useSelector((state) => state.auth);
+
   return (
     <article className="bg-white text-slate-400 text-sm w-full rounded-xl border border-slate-200 h-fit">
       <header className="flex justify-between border-slate-200 border-b">
@@ -17,7 +20,7 @@ const ProfileDescCard = () => {
           className="w-20 h-20 object-cover rounded-full -mt-10 mx-auto border-2 border-white"
           alt="profile-cover"
         />
-        <p className="text-lg text-gray-700">Bablu Tailor</p>
+        <p className="text-lg text-gray-700">{`${user.firstName} ${user.lastName}`}</p>
         <div className="w-full px-4 pb-4">
           <div className="flex items-center gap-2 text-lg mb-2">
             <Laptop />

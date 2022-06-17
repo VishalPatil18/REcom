@@ -1,8 +1,16 @@
+import { useDispatch } from "react-redux";
 import { PostCard } from "../components";
 import { Camera, Plus } from "../icons";
 import { ASSETS_URL } from "../constants";
+import { logoutHandler } from "../utilities/auth";
+import { useDocumentTitle, useScrollToTop } from "../hooks";
 
 const Profile = () => {
+  const dispatch = useDispatch();
+
+  useDocumentTitle("Profile");
+  useScrollToTop();
+
   return (
     <section className="pt-4 mx-auto max-w-screen-lg flex flex-col">
       <header className="relative flex justify-between border-slate-200 border-b">
@@ -29,8 +37,14 @@ const Profile = () => {
                 <Plus />
               </button>
             </div>
-            <button className="px-4 py-1 bg-blue-400 text-white rounded-lg mt-6">
+            <button className="px-4 py-1 bg-blue-400 text-white rounded-lg mt-4">
               Edit Profile
+            </button>
+            <button
+              className="px-4 py-1 bg-red-400 text-white rounded-lg mt-2"
+              onClick={() => logoutHandler(dispatch)}
+            >
+              Logout
             </button>
           </div>
           <div className="realtive w-full text-center md:text-left py-2 px-6">

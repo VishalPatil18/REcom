@@ -1,10 +1,25 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { User, Lock, Eye, EyeOff } from "../icons";
 import { ASSETS_URL } from "../constants";
+import { useDocumentTitle, useScrollToTop } from "../hooks";
+import { loginHandler } from "../utilities/auth/loginHandler";
+import { validateLoginUser } from "../utilities";
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [user, setUser] = useState({
+    username: "",
+    password: "",
+  });
+
+  useDocumentTitle("Login");
+  useScrollToTop();
 
   return (
     <section className="flex items-center justify-center h-full w-full m-auto loginSection">
@@ -22,7 +37,12 @@ const Login = () => {
               <input
                 className="w-full py-2 px-4 pl-9 rounded-lg bg-white border-slate-200 border focus:border-blue-500"
                 type="email"
-                placeholder="bablu@gmail.com"
+                placeholder="Username"
+                value={user.username}
+                onChange={(e) =>
+                  setUser((user) => ({ ...user, username: e.target.value }))
+                }
+                required
               />
               <User className="absolute top-1/2 transform -translate-y-1/2 left-2 text-xl text-slate-300" />
             </div>
@@ -31,6 +51,11 @@ const Login = () => {
                 className="w-full py-2 px-4 pl-9 rounded-lg bg-white border-slate-200 border focus:border-blue-500"
                 type={passwordVisible ? "text" : "password"}
                 placeholder="Password"
+                value={user.password}
+                onChange={(e) =>
+                  setUser((user) => ({ ...user, password: e.target.value }))
+                }
+                required
               />
               <Lock className="absolute top-1/2 transform -translate-y-1/2 left-2 text-xl text-slate-300" />
               <button
@@ -50,8 +75,35 @@ const Login = () => {
             </div>
             <button className="text-xs underline">Forgot Password?</button>
           </div>
-          <button className="w-full px-6 py-2 bg-blue-400 text-white rounded-full mt-6">
+          <button
+            className="w-full px-6 py-2 bg-blue-400 text-white rounded-full mt-6"
+            onClick={(event) => {
+              event.preventDefault();
+              const validation = validateLoginUser(user);
+              if (validation === true) {
+                loginHandler(event, dispatch, user, navigate);
+              } else {
+                setUser((prevState) => ({
+                  ...prevState,
+                  password: "",
+                }));
+                toast.warning(validation);
+              }
+            }}
+          >
             Login
+          </button>
+          <button
+            className="w-full mt-3 text-sm underline"
+            onClick={() =>
+              setUser((user) => ({
+                ...user,
+                username: "bablutailor",
+                password: "bablutailor",
+              }))
+            }
+          >
+            Guest Login
           </button>
         </div>
       </div>
