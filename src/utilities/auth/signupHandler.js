@@ -12,7 +12,7 @@ const signupHandler = async (event, dispatch, newUser, navigate) => {
     navigate("/home");
     toast.success("Signup Successful!");
   } else {
-    toast.error(payload.data.errors[0]);
+    toast.error(payload.data.error[0]);
   }
 };
 
