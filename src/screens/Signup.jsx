@@ -1,10 +1,26 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { ASSETS_URL } from "../constants";
 import { SignupStepOne, SignupStepThree, SignupStepTwo } from "../components";
+import { useDocumentTitle, useScrollToTop } from "../hooks";
+import { validateSignupUserStep1, validateSignupUserStep2 } from "../utilities";
 
 const Signup = () => {
   const [step, setStep] = useState(1);
+  const [newUser, setNewUser] = useState({
+    firstName: "",
+    lastName: "",
+    username: "",
+    email: "",
+    password: "",
+  });
+  const [confirmPassword, setConfirmPassword] = useState({
+    confirmPassword: "",
+  });
+
+  useDocumentTitle("Signup");
+  useScrollToTop();
 
   return (
     <section className="flex flex-col items-center justify-center h-full w-full m-auto loginSection">
@@ -21,11 +37,22 @@ const Signup = () => {
           {(() => {
             switch (step) {
               case 1:
-                return <SignupStepOne />;
+                return (
+                  <SignupStepOne newUser={newUser} setNewUser={setNewUser} />
+                );
               case 2:
-                return <SignupStepTwo />;
+                return (
+                  <SignupStepTwo
+                    newUser={newUser}
+                    setNewUser={setNewUser}
+                    confirmPassword={confirmPassword}
+                    setConfirmPassword={setConfirmPassword}
+                  />
+                );
               case 3:
-                return <SignupStepThree />;
+                return (
+                  <SignupStepThree newUser={newUser} setNewUser={setNewUser} />
+                );
               default:
                 return <></>;
             }
@@ -54,7 +81,18 @@ const Signup = () => {
             {step < 3 ? (
               <button
                 className="w-fit px-6 py-2 border border-slate-200 bg-white text-gray-800 rounded-xl transition-colors duration-200 hover:bg-blue-400 hover:text-white hover:border-blue-400 hover:shadow hover:shadow-blue-300"
-                onClick={() => setStep((prevStep) => prevStep + 1)}
+                onClick={(event) => {
+                  event.preventDefault();
+                  const validation =
+                    step === 1
+                      ? validateSignupUserStep1(newUser)
+                      : validateSignupUserStep2(newUser, confirmPassword);
+                  if (validation === true) {
+                    setStep((prevStep) => prevStep + 1);
+                  } else {
+                    toast.warning(validation);
+                  }
+                }}
               >
                 Next
               </button>

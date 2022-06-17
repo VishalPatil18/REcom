@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "../icons";
 
-const SignupStepTwo = () => {
+const SignupStepTwo = ({
+  newUser,
+  setNewUser,
+  confirmPassword,
+  setConfirmPassword,
+}) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
@@ -11,6 +16,24 @@ const SignupStepTwo = () => {
       </h5>
       <div className="bg-white border border-slate-200 rounded-xl p-6">
         <div className="flex flex-col gap-4">
+          <div className="p-2 rounded-lg bg-slate-50 border border-slate-200">
+            <label className="w-full px-2 bg-slate-50 text-slate-400 text-xs uppercase">
+              Email
+            </label>
+            <input
+              className="w-full p-2 bg-slate-50"
+              type="email"
+              placeholder="bablu@gmail.com"
+              value={newUser.email}
+              onChange={(e) =>
+                setNewUser((newUser) => ({
+                  ...newUser,
+                  email: e.target.value,
+                }))
+              }
+              required
+            />
+          </div>
           <div className="p-2 rounded-lg bg-slate-50 border border-slate-200 relative">
             <label className="w-full px-2 bg-slate-50 text-slate-400 text-xs uppercase">
               Password
@@ -19,6 +42,13 @@ const SignupStepTwo = () => {
               className="w-full p-2 bg-slate-50"
               type={passwordVisible ? "text" : "password"}
               placeholder="••••••••"
+              onChange={(e) =>
+                setNewUser((newUser) => ({
+                  ...newUser,
+                  password: e.target.value,
+                }))
+              }
+              required
             />
             <button
               className="absolute top-1/2 transform -translate-y-1/2 right-4 text-xl text-slate-300 cursor-pointer transition-colors duration-200 hover:text-gray-800"
@@ -35,6 +65,13 @@ const SignupStepTwo = () => {
               className="w-full p-2 bg-slate-50"
               type="password"
               placeholder="••••••••"
+              onChange={(e) =>
+                setConfirmPassword((prevConfirmPassword) => ({
+                  ...prevConfirmPassword,
+                  confirmPassword: e.target.value,
+                }))
+              }
+              required
             />
           </div>
         </div>

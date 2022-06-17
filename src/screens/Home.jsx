@@ -1,6 +1,10 @@
 import { FeedScroll, ProfileDescCard, SuggestedFriends } from "../components";
+import { useDocumentTitle, useScrollToTop } from "../hooks";
 
 const Home = () => {
+  useDocumentTitle("Home");
+  useScrollToTop();
+
   return (
     <section className="pt-4 mx-auto max-w-screen-xl flex gap-6 flex-col md:flex-row">
       <aside className="flex-col gap-6 w-full max-w-xs hidden h-full overflow-y-auto sticky top-20 md:flex">

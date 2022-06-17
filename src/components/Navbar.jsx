@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ASSETS_URL } from "../constants";
 import { Apps, Like, Message, Notification, Search } from "../icons";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <nav className="p-2 bg-white text-slate-400 shadow-md flex items-center text-xl gap-3 fixed top-0 left-0 w-full z-10">
-      <Link to="/" className="shrink-0">
+      <Link to="/home" className="shrink-0">
         <img
           src={`${ASSETS_URL}/v1649485162/REcom/logo_oahebo.png`}
           className="h-10 w-10"
@@ -52,7 +54,10 @@ const Navbar = () => {
         </button>
       </div>
       <div className="ml-auto md:ml-0 order-3">
-        <button className="p-2 rounded-lg transition-colors">
+        <button
+          className="p-2 rounded-lg transition-colors"
+          onClick={() => navigate("/profile/user")}
+        >
           <img
             src={`${ASSETS_URL}/v1649523258/REcom/dan_bgkcqr.jpg`}
             className="h-8 w-8 rounded-full"
